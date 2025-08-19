@@ -88,7 +88,7 @@ def get_new_type(row):
         return 'Workstation'
 
     if (rlike(internal_contributor, r".*(?<![A-Za-z0-9])linux(?![A-Za-z0-9])") and not rlike(host_name, r"(?i).*(router|firewall|switch|gateway|modem|access[\s\-_]*point)")) or \
-        rlike(internal_contributor, r".*(?<![A-Za-z0-9])(?:laptop|virtual host|vdi|mac|windows|linux|endpoint|debian|ubuntu|tablet)(?![A-Za-z0-9])") or \
+        rlike(internal_contributor, r".*(?<![A-Za-z0-9])(?:laptop|virtual host|vdi|mac|windows|endpoint|debian|ubuntu|tablet)(?![A-Za-z0-9])") or \
        (rlike(internal_contributor, r".*(?<![A-Za-z0-9])other(?![A-Za-z0-9])") and rlike(host_name, r".*(?<![A-Za-z0-9])vdi(?![A-Za-z0-9])")) or \
        rlike(internal_contributor, r".*(?<![A-Za-z0-9])(?:optiplex|book|hp elite|hp\s*elitedesk|prodesk|pavilion|surface|compaq|latitude|travelmate|gaming|veriton|precision|presario|predator|inspiron|chromeos|chrome|vostro|mini pc|extensa|proone|sff|tecra|thin|alienware|all-in-one pc|acer|aspire|microtower|spectre|nitro|ideapad|bravo|rog|hp pro|hp\s*probook|dell xps 13|dell xps 15|lenovo legion|lenovo yoga|haiku|parrot|webos)(?![A-Za-z0-9])|.*(?<![A-Za-z0-9])asus(?![A-Za-z0-9])(?!_)") or \
        rlike(host_name, r".*(?<![A-Za-z0-9])(?:laptop|workstation)(?![A-Za-z0-9])"):
